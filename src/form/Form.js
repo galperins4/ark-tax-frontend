@@ -79,7 +79,7 @@ class FormPage extends React.Component {
       loading: true,
     });
 
-    axios.post(`${apiAddress}/api`, {
+    axios.post(`${apiAddress}`, {
       addresses: addresses.map((address) => address.addressName).filter((address) => address !== ''),
       exceptions: transactions.map((transaction) => transaction.transactionName).filter((transaction) => transaction !== ''),
       network: networkCode,
